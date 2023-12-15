@@ -66,5 +66,8 @@ call minpac#add('ryanoasis/vim-devicons')
 " Start screen
 call minpac#add('mhinz/vim-startify')
 
+" Git support
+call minpac#add('tpope/vim-fugitive')
+
 " Quarto support
 call minpac#add('quarto-dev/quarto-vim')
