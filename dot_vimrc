@@ -1,0 +1,70 @@
+set nocompatible
+
+filetype on
+filetype plugin on
+filetype indent on
+
+syntax on
+
+set number
+
+set cursorline
+set cursorcolumn
+
+set ruler
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+set textwidth=80
+set wrap
+
+set encoding=UTF-8
+
+" Font type and size
+if has('gui_macvim')
+	set guifont=Hack\ Nerd\ Font:h14
+elseif has ('win32')
+	set guifont=Consolas:h12
+endif
+
+" Remove left and right scrollbars in GUI
+set guioptions=
+
+" Minpac: initialization
+packadd minpac
+call minpac#init()
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+
+" Colorscheme: Ayu
+call minpac#add('ayu-theme/ayu-vim')
+set termguicolors
+let ayucolor="dark"
+colorscheme ayu
+
+" Status/tabline: vim-airline and simple theme
+call minpac#add('vim-airline/vim-airline')
+call minpac#add('vim-airline/vim-airline-themes')
+let g:airline_theme='simple'
+
+" Auto Pairs
+call minpac#add('LunarWatcher/auto-pairs')
+
+" NERDTree
+call minpac#add('preservim/nerdtree')
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+let NERDTreeWinPos="left"
+let NERDTreeShowHidden=1
+
+" Filetype icons
+call minpac#add('ryanoasis/vim-devicons')
+
+" Start screen
+call minpac#add('mhinz/vim-startify')
+
+" Quarto support
+call minpac#add('quarto-dev/quarto-vim')
