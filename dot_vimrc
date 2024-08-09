@@ -30,6 +30,9 @@ set wrap
 
 set clipboard^=unnamed,unnamedplus
 
+set splitbelow
+set termwinsize=10x0
+
 " Font type and size
 if has('gui_macvim')
 	set guifont=Hack\ Nerd\ Font:h14
